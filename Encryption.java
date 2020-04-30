@@ -7,6 +7,9 @@ public class Encryption {
 		// Outputs "Cannot encrypt an empty string."
 		System.out.println(encrypt(""));
 		
+		// Outputs "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau"
+		System.out.println(encrypt("if man was meant to stay on the ground god would have given us roots"));
+		
 		// Outputs "hae and via ecy"
 		System.out.println(encrypt("haveaniceday"));
 		
@@ -19,6 +22,9 @@ public class Encryption {
 	
 	// Given a string, returns the encrypted version of the string
 	public static String encrypt(String stringToEncrypt) {
+		// Removes all spaces from the input string
+		stringToEncrypt = stringToEncrypt.replaceAll(" ", "");
+
 		int length = stringToEncrypt.length();
 		// A check for an empty string input
 		if(length == 0) {
